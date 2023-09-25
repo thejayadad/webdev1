@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* CSS styles for the timer and celebration container */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Hide overflow for the animated background */
+}
+
+.timer {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+.celebration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/1647121/pexels-photo-1647121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Use an image for confetti */
+    background-repeat: no-repeat;
+    background-size: 30px; /* Adjust the size of the confetti */
+    animation: celebrate 3s infinite; 
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes celebrate {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh); /* Move the confetti up */
+    }
+}
