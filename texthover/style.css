@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+
+}
+
+div{
+    letter-spacing: 2px;
+    line-height: 60px;
+    height: 100px;
+    width: 100px;
+}
+.text{
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,.6)
+}
+.hover-text{
+    position: absolute;
+    inset: 0;
+    width: 0;
+    color: orangered;
+    overflow: hidden;
+    border-right: 1px solid orangered;
+    transition: .5s ease-in-out;
+}
+div:hover .hover-text{
+    width: 100%;
+    filter: drop-shadow(0 0 40px orangered)
+}
