@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: colorChange 1s infinite alternate ease-in-out;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #3498db;
+    }
+    100% {
+        background-color: #e74c3c;
+    }
+}
